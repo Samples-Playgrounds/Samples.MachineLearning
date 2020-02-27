@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\external\Data\Core.Math.Samples\data\HolisticWare.Core.Sample.Data\HolisticWare.Core.Sample.Data.csproj" />
+    <ProjectReference Include="..\..\..\..\source\Core\HolisticWare.Ph4ct3x.Core\HolisticWare.Ph4ct3x.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Core\HolisticWare.Ph4ct3x.DiagnosticTests.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Evaluation\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Evaluation.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Training\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Training.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Motorical\HolisticWare.Ph4ct3x.DiagnosticTests.Motorical.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Nutrition\HolisticWare.Ph4ct3x.DiagnosticTests.Nutrition.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Physiological\HolisticWare.Ph4ct3x.DiagnosticTests.Physiological.csproj" />
+    <ProjectReference Include="..\Ph4ct3x.App.Somatotype.Evaluate.ML.NET\Ph4ct3x.App.Somatotype.Evaluate.ML.NET.csproj" />
+    <ProjectReference Include="..\Ph4ct3x.Somatotype.netstandard20\Ph4ct3x.Somatotype.netstandard20.csproj" />
+  </ItemGroup>
+
+</Project>

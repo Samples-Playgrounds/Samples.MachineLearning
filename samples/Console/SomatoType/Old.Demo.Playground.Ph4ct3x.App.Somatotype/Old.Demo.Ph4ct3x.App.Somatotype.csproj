@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\external\Data\Core.Math.Samples\data\HolisticWare.Core.Sample.Data\HolisticWare.Core.Sample.Data.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Training\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Training.csproj" />
+    <ProjectReference Include="..\Ph4ct3x.Somatotype.netstandard20\Ph4ct3x.Somatotype.netstandard20.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="12.2.1" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.4.0" />
+  </ItemGroup>
+</Project>

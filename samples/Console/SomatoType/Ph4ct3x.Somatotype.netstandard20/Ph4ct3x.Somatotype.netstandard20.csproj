@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="MachineLearningDotNet\Models\Model_Endomorphic.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.5.0-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\external\Data\Core.Math.Samples\data\HolisticWare.Core.Sample.Data\HolisticWare.Core.Sample.Data.csproj" />
+    <ProjectReference Include="..\..\..\..\source\Core\HolisticWare.Ph4ct3x.Core\HolisticWare.Ph4ct3x.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Core\HolisticWare.Ph4ct3x.DiagnosticTests.Core.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Evaluation\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Evaluation.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Training\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.ML.Training.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological\HolisticWare.Ph4ct3x.DiagnosticTests.Morphological.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Motorical\HolisticWare.Ph4ct3x.DiagnosticTests.Motorical.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Nutrition\HolisticWare.Ph4ct3x.DiagnosticTests.Nutrition.csproj" />
+    <ProjectReference Include="..\..\..\..\source\DiagnosticTests\HolisticWare.Ph4ct3x.DiagnosticTests.Physiological\HolisticWare.Ph4ct3x.DiagnosticTests.Physiological.csproj" />
+  </ItemGroup>
+
+</Project>
