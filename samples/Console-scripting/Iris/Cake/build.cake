@@ -1,11 +1,14 @@
+using System;
+
 Information("Scientific Playground - Scripting - Machine Learning");
+Console.WriteLine("     Cake Build System");
 
 // tools (needed for code and Cake addins)
-#tool nuget:?package=Microsoft.ML&version=1.4.0
+//#tool nuget:?package=Microsoft.ML&version=1.4.0
 
 // Cake Addins
 // Cake specific 
-//#addin nuget:?package=Microsoft.ML&version=1.4.0
+#addin nuget:?package=Microsoft.ML&version=1.4.0&loaddependencies=true
 
 #load   "./Common/Data.cake"
 #load   "./Evaluate/ModelEvaluationPrediction.cake"
