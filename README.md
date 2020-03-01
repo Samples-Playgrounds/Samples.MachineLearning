@@ -30,13 +30,19 @@ ASP.net Core, Desktop UWP, AppKit, etc...)
 
 ## Authors
 
-1.  [katodix]: https://github.com/katodix
+1.  Darko Katovic [katodix]
 
     Faculty of Kinesiology, Univesity of Zagreb
 
-2.  [moljac]: https://github.com/moljac
+    [katodix]: https://github.com/katodix
+
+2.  Miljenko Cvjetko (Mel) [moljac]
 
     Microsoft (Xamarin Inc.), HolisticWare (moljac's small business when he was)
 
-3.  [sasa]: https://github.com/someone1984
+    [moljac]: https://github.com/moljac
+
+3.  Sasa Bajtl [sasa]
+
+    [sasa]: https://github.com/someone1984
 
