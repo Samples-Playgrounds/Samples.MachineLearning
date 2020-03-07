@@ -52,15 +52,15 @@
 
             if (prediction.PredictedClusterId == 1)
             {
-                iris_class = "Setosa";
+                iris_class = "Setosa if";
             }
             else if (prediction.PredictedClusterId == 2)
             {
-                iris_class = "Versicolor";
+                iris_class = "Versicolor if";
             }
             else if (prediction.PredictedClusterId == 3)
             {
-                iris_class = "Virginica";
+                iris_class = "Virginica if";
             }
             else
             {
@@ -71,13 +71,13 @@
             switch(prediction.PredictedClusterId)
             {
                 case 1:
-                    iris_class = "Setosa";
+                    iris_class = "Setosa switch";
                     break;
                 case 2:
-                    iris_class = "Versicolor";
+                    iris_class = "Versicolor switch";
                     break;
                 case 3:
-                    iris_class = "Virginica";
+                    iris_class = "Virginica switch";
                     break;
                 default:
                     throw new System.Exception("WTF?????");
