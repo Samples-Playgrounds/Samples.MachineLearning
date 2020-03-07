@@ -54,13 +54,13 @@
             {
                 iris_class = "Setosa";
             }
-            else if (prediction.PredictedClusterId == 1)
+            else if (prediction.PredictedClusterId == 2)
             {
-                iris_class = "Setosa";
+                iris_class = "Versicolor";
             }
-            else if (prediction.PredictedClusterId == 1)
+            else if (prediction.PredictedClusterId == 3)
             {
-                iris_class = "Setosa";
+                iris_class = "Virginica";
             }
             else
             {
