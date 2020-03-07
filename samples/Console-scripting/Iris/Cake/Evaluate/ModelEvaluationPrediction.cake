@@ -48,6 +48,43 @@
             Console.WriteLine($"Cluster: {prediction.PredictedClusterId}");
             Console.WriteLine($"Distances: {string.Join(" ", prediction.Distances)}");
 
+            string iris_class = "N/A";
+
+            if (prediction.PredictedClusterId == 1)
+            {
+                iris_class = "Setosa";
+            }
+            else if (prediction.PredictedClusterId == 1)
+            {
+                iris_class = "Setosa";
+            }
+            else if (prediction.PredictedClusterId == 1)
+            {
+                iris_class = "Setosa";
+            }
+            else
+            {
+                throw new System.Exception("WTF?????");
+            }
+            Console.WriteLine($"Cluster (if): {iris_class}");
+
+            switch(prediction.PredictedClusterId)
+            {
+                case 1:
+                    iris_class = "Setosa";
+                    break;
+                case 2:
+                    iris_class = "Versicolor";
+                    break;
+                case 3:
+                    iris_class = "Virginica";
+                    break;
+                default:
+                    throw new System.Exception("WTF?????");
+            }
+            Console.WriteLine($"Cluster (switch/case): {iris_class}");
+
+
             return;
         }
     }  
