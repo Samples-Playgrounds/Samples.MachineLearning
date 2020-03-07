@@ -49,6 +49,8 @@ Task("Consume")
                                                     PetalWidth = 0.2f
                                                 }
                                             );
+
+            return;
         }
     );
 

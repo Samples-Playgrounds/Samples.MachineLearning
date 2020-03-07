@@ -8,9 +8,16 @@
             // https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/save-load-machine-learning-models-ml-net
             // https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/machine-learning-model-predictions-ml-net
 
-            ITransformer model = null;
-            PredictionEngine<IrisData, ClusterPrediction> engine_prediction = null;
+            // prediction result for IrisData
+            //  Predicted Label - row Id of the CSV
+            //  Score           - float distanc from the cluster 
             ClusterPrediction prediction = null;
+
+            // Model is ITransformer
+            ITransformer model = null;
+
+            // Prediction Engine loads trained model from zip
+            PredictionEngine<IrisData, ClusterPrediction> engine_prediction = null;
 
             //Define DataViewSchema for data preparation pipeline and trained model
             DataViewSchema model_schema = null;
