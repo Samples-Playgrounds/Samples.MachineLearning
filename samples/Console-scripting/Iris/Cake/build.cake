@@ -3,6 +3,8 @@ using System;
 Information("Scientific Playground - Scripting - Machine Learning");
 Console.WriteLine("     Cake Build System");
 
+string TARGET = Argument ("t", Argument ("target", "Evaluate"));
+
 // tools (needed for code and Cake addins)
 //#tool nuget:?package=Microsoft.ML&version=1.4.0
 
@@ -20,6 +22,7 @@ Console.WriteLine("     Cake Build System");
                                                         "IrisClusteringModel.zip"
                                                     );
 
+
 Task("Learn")
 	.Does
     (
@@ -29,12 +32,12 @@ Task("Learn")
         }
     );
 
-Task("Evaluating")
+Task("Consume")
 	.Does
     (
         () => 
         {
-            Information("   Evaluating");
+            Information("   Consume");
 
             ModelEvaluationPrediction.EvaluateSingleTestPrediction
                                             (
@@ -49,5 +52,30 @@ Task("Evaluating")
         }
     );
 
+Task("Evaluate")
+	.Does
+    (
+        () => 
+        {
+            Information("   Evaluate");
+            Information("       calling Consume");
 
-RunTarget("Evaluating");
+            RunTarget("Consume");
+
+            return;
+        }
+    );
+
+Task("Predict")
+    .IsDependentOn("Evaluate")
+	.Does
+    (
+        () => 
+        {
+            Information("   Predict");
+
+            return;
+        }
+    );
+
+RunTarget(TARGET);
