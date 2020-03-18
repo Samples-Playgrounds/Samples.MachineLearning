@@ -42,6 +42,8 @@ namespace Iris.netcoreapp30
         //static async Task Main(string[] args)
         static void Main(string[] args)
         {
+
+            Console.WriteLine("Learning model");
             //string file = "iris.data.csv";
             //CharacterSeparatedValues csv = new CharacterSeparatedValues();
             //string content =
@@ -65,7 +67,8 @@ namespace Iris.netcoreapp30
             MLContext mlContext = new MLContext(seed: 0);
 
             TextLoader textLoader = null;
-            
+
+            Console.WriteLine(" Reading data");
             textLoader = mlContext.Data.CreateTextLoader<IrisData>(hasHeader: false, separatorChar: ',');
             IDataView dataView = textLoader.Read(_dataPath);
 
@@ -85,6 +88,7 @@ namespace Iris.netcoreapp30
                         mlContext.Clustering.Trainers.KMeans(featuresColumnName, clustersCount: 3)
                     );
 
+            Console.WriteLine(" Fitting/Learning data");
             var model = pipeline.Fit(dataView);
 
 
@@ -99,6 +103,54 @@ namespace Iris.netcoreapp30
             Console.WriteLine($"Cluster: {prediction.PredictedClusterId}");
             Console.WriteLine($"Distances: {string.Join(" ", prediction.Distances)}");
 
+
+
+             prediction = predictor.Predict
+                                        (
+                                            new IrisData
+                                            {
+                                                SepalLength = 7.6f,
+                                                SepalWidth = 2.5f,
+                                                PetalLength = 6.9f,
+                                                PetalWidth = 2.4f
+                                            }
+                                        );
+            Console.WriteLine($"Cluster: {prediction.PredictedClusterId}");
+            Console.WriteLine($"Distances: {string.Join(" ", prediction.Distances)}");
+
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.WriteLine(new string('-', 90));
+                Console.Write("Enter CSV Data (SepalLenght,SepalWidth, PetalLength, PetalWidth):");
+                string line = Console.ReadLine();
+
+                if(string.IsNullOrEmpty(line))
+                {
+                    repeat = false;
+                }
+                else
+                {
+                    string[] parts = line.Split(new char[] { ',' });
+                    if(parts.Length != 4)
+                    {
+                        throw new System.ArgumentException("4 numbers needed");
+                    }
+                    prediction = predictor.Predict
+                                               (
+                                                   new IrisData
+                                                   {
+                                                       SepalLength = float.Parse(parts[0]),
+                                                       SepalWidth = float.Parse(parts[1]),
+                                                       PetalLength = float.Parse(parts[2]),
+                                                       PetalWidth = float.Parse(parts[3])
+                                                   }
+                                                );
+                    Console.WriteLine($"Cluster: {prediction.PredictedClusterId}");
+                    Console.WriteLine($"Distances: {string.Join(" ", prediction.Distances)}");
+
+                }
+            }
             //Task.WaitAll();
 
         }

@@ -16,9 +16,6 @@
     <PackageReference Include="Microsoft.Data.DataView" Version="0.10.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Text.NetStandard13\HolisticWare.Core.Text.NetStandard13.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <None Remove="Data\iris.data" />
   </ItemGroup>
   <ItemGroup>
