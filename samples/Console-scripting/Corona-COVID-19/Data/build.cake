@@ -1,3 +1,6 @@
+using System.IO;
+using System;
+using System.Security.AccessControl;
 string[] urls_json = 
 {
     "https://covidtracking.com/api/states",
@@ -22,6 +25,8 @@ string[] urls_csv =
 
 System.Net.Http.HttpClient http_client = new System.Net.Http.HttpClient();
 
+int index = 1;
+
 foreach(string url_json in urls_json)
 {
     Information($"Url = {url_json}");
@@ -29,6 +34,7 @@ foreach(string url_json in urls_json)
     System.Uri url = new System.Uri(url_json);
 
     string result = null;
+
     try
     {
         result = await http_client.GetStringAsync(url);        
@@ -39,6 +45,27 @@ foreach(string url_json in urls_json)
     }
 
     Information($"Response = {System.Environment.NewLine}{result}");
+
+    string path_json =  System.IO.Path.Combine
+                                        (
+                                            System.Environment.CurrentDirectory,
+                                            "json"
+                                        );
+
+    if ( ! System.IO.Directory.Exists(path_json))
+    {
+        System.IO.Directory.CreateDirectory(path_json);
+    }
+    System.IO.File.WriteAllText
+                            (
+                                System.IO.Path.Combine
+                                                (
+                                                    path_json,
+                                                    $"{index}.json"
+                                                ),
+                                result
+                            );
+    index++;
 } 
 
 foreach(string url_csv in urls_csv)
@@ -59,13 +86,6 @@ foreach(string url_csv in urls_csv)
 
     Information($"Response = {System.Environment.NewLine}{result}");
 } 
-
-
-using (System.IO.FileStream output = new System.IO.FileStream(@"Results2.txt", FileMode.Create))
-{
-  inputStream.CopyTo(output);
-}
-
 
 http_client.Dispose();
 
