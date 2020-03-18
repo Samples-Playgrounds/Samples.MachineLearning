@@ -35,7 +35,7 @@ foreach(string url_json in urls_json)
     }
     catch (Exception ex)
     {
-        result = "Error " + ex.ToString();
+        result = $"Error {ex.ToString()}";
     }
 
     Information($"Response = {System.Environment.NewLine}{result}");
