@@ -60,24 +60,12 @@ foreach(string url_csv in urls_csv)
     Information($"Response = {System.Environment.NewLine}{result}");
 } 
 
+
+using (System.IO.FileStream output = new System.IO.FileStream(@"Results2.txt", FileMode.Create))
 {
-// Folder, where a file is created.  
-// Make sure to change this folder to your own folder  
-string folder = @"/Users/darko/Documents";  
-// Filename  
-string fileName = "Results.txt";  
-// Fullpath. You can direct hardcode it if you like.  
-string fullPath = folder + fileName;  
-// An array of strings  
-string[] result;  
-// Write array of strings to a file using WriteAllLines.  
-// If the file does not exists, it will create a new file.  
-// This method automatically opens the file, writes to it, and closes file  
-File.WriteAllLines(fullPath, result);  
-// Read a file  
-string readText = File.ReadAllText(fullPath);  
-Console.WriteLine(readText);  
+  inputStream.CopyTo(output);
 }
+
 
 http_client.Dispose();
 
