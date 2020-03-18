@@ -24,6 +24,20 @@ with scripts, data, algorithms and after he is done with playing, the real tough
 [moljac]) will integrate C# code from scripts into real world applications (mobile with Xamarin, 
 ASP.net Core, Desktop UWP, AppKit, etc...)
 
+## Tools used
+
+1.  .NET Core (Conosle applications)
+
+2.  .NET Scripting tools (Cake)
+
+Cake build system installation (`dotnet tool`)
+
+```
+dotnet tool uninstall   --global Cake.Tool 
+dotnet tool install     --global Cake.Tool 
+```
+
+
 ## Further details
 
 [./docs/readme.md](./docs/readme.md)
