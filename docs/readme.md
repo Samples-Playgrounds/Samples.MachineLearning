@@ -20,7 +20,7 @@
 
     *   https://towardsdatascience.com/introduction-to-machine-learning-in-c-with-ml-net-bf45502d8110?gi=7f44d58a41db
 
-    *   https://www.youtube.com/watch?v=zXn10vy8F6E    
+    *   https://www.youtube.com/watch?v=zXn10vy8F6E
 
     *   https://dzone.com/articles/machine-learning-for-net-developers-using-visual-s
 
@@ -35,7 +35,7 @@
     *   https://www.tensorflow.org/tutorials/
 
     *   https://github.com/tensorflow/examples
-    
+
     *   https://www.tensorflow.org/resources/learn-ml
 
     *   https://www.tensorflow.org/resources/learn-ml/theoretical-and-advanced-machine-learning
@@ -66,7 +66,11 @@
 
         1.  Step 1 - Regression
 
+            [Somatotype.Step01.Regression.V2]
+
             [Somatotype.Step01.Regression.V2]: https://studio.azureml.net/Home/ViewWorkspaceCached/f923495916604ddfb1a42a0098161ea9#Workspaces/Experiments/Experiment/f923495916604ddfb1a42a0098161ea9.f-id.5da854c269984c94b7e439c3e8a4ede5/ViewExperiment
+
+            [Somatotype.Step01.Regression.V1]
 
             [Somatotype.Step01.Regression.V1]: https://studio.azureml.net/Home/ViewWorkspaceCached/f923495916604ddfb1a42a0098161ea9#Workspaces/Experiments/Experiment/f923495916604ddfb1a42a0098161ea9.f-id.90bf8fa9fade4034a618da885d049491/ViewExperiment
 
