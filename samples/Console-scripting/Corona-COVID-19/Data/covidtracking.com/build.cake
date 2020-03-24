@@ -26,8 +26,6 @@ string[] urls_csv =
     "https://covidtracking.com/api/urls.csv",
 };
 
-System.Net.Http.HttpClient http_client = new System.Net.Http.HttpClient();
-
 string path_json =  System.IO.Path.Combine
                                     (
                                         System.Environment.CurrentDirectory,
@@ -41,12 +39,12 @@ string path_csv =  System.IO.Path.Combine
                                         "csv"
                                     );
 
-int index = 1;
-
 if ( ! System.IO.Directory.Exists(path_json))
 {
     System.IO.Directory.CreateDirectory(path_json);
 }
+
+System.Net.Http.HttpClient http_client_1 = new System.Net.Http.HttpClient();
 
 foreach(string url_json in urls_json)
 {
@@ -58,7 +56,7 @@ foreach(string url_json in urls_json)
 
     try
     {
-        result = await http_client.GetStringAsync(url);        
+        result = await http_client_1.GetStringAsync(url);        
     }
     catch (Exception ex)
     {
@@ -80,7 +78,6 @@ foreach(string url_json in urls_json)
                                                 ),
                                 result
                             );
-    index++;
 } 
 
 if ( ! System.IO.Directory.Exists(path_csv))
@@ -88,7 +85,8 @@ if ( ! System.IO.Directory.Exists(path_csv))
     System.IO.Directory.CreateDirectory(path_csv);
 }
 
-index = 1;
+int index = 1;
+
 foreach(string url_csv in urls_csv)
 {
     Information($"Url = {url_csv}");
@@ -99,7 +97,7 @@ foreach(string url_csv in urls_csv)
 
     try
     {
-        result = await http_client.GetStringAsync(url);        
+        result = await http_client_1.GetStringAsync(url);        
     }
     catch (Exception ex)
     {
@@ -121,6 +119,6 @@ foreach(string url_csv in urls_csv)
 } 
 
 
-http_client.Dispose();
+http_client_1.Dispose();
 
 System.Threading.Tasks.Task.WaitAll();
