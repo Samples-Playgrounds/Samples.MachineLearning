@@ -28,7 +28,25 @@ string[] urls_csv =
 
 System.Net.Http.HttpClient http_client = new System.Net.Http.HttpClient();
 
+string path_json =  System.IO.Path.Combine
+                                    (
+                                        System.Environment.CurrentDirectory,
+                                        "covidtracking.com",
+                                        "json"
+                                    );
+string path_csv =  System.IO.Path.Combine
+                                    (
+                                        System.Environment.CurrentDirectory,
+                                        "covidtracking.com",
+                                        "csv"
+                                    );
+
 int index = 1;
+
+if ( ! System.IO.Directory.Exists(path_json))
+{
+    System.IO.Directory.CreateDirectory(path_json);
+}
 
 foreach(string url_json in urls_json)
 {
@@ -47,19 +65,8 @@ foreach(string url_json in urls_json)
         result = $"Error {ex.ToString()}";
     }
 
-    Information($"Response = {System.Environment.NewLine}{result}");
+    // Information($"Response = {System.Environment.NewLine}{result}");
 
-    string path_json =  System.IO.Path.Combine
-                                        (
-                                            System.Environment.CurrentDirectory,
-                                            "covidtracking.com",
-                                            "json"
-                                        );
-
-    if ( ! System.IO.Directory.Exists(path_json))
-    {
-        System.IO.Directory.CreateDirectory(path_json);
-    }
     System.IO.File.WriteAllText
                             (
                                 System.IO.Path.Combine
@@ -70,7 +77,43 @@ foreach(string url_json in urls_json)
                                 result
                             );
     index++;
+} 
 
+if ( ! System.IO.Directory.Exists(path_csv))
+{
+    System.IO.Directory.CreateDirectory(path_csv);
+}
+
+index = 1;
+foreach(string url_csv in urls_csv)
+{
+    Information($"Url = {url_csv}");
+
+    System.Uri url = new System.Uri(url_csv);
+
+    string result = null;
+
+    try
+    {
+        result = await http_client.GetStringAsync(url);        
+    }
+    catch (Exception ex)
+    {
+        result = $"Error {ex.ToString()}";
+    }
+
+    //Information($"Response = {System.Environment.NewLine}{result}");
+
+    System.IO.File.WriteAllText
+                            (
+                                System.IO.Path.Combine
+                                                (
+                                                    path_csv,
+                                                    $"{index}.csv"
+                                                ),
+                                result
+                            );
+    index++;
 } 
 
 
