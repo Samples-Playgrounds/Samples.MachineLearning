@@ -67,12 +67,16 @@ foreach(string url_json in urls_json)
 
     // Information($"Response = {System.Environment.NewLine}{result}");
 
+    string file_name = url_json.Replace(@"https://covidtracking.com/api/", "");
+    file_name = $"{file_name}.json";
+    file_name = file_name.Replace(@"/", "_");
+
     System.IO.File.WriteAllText
                             (
                                 System.IO.Path.Combine
                                                 (
                                                     path_json,
-                                                    $"{index}.json"
+                                                    file_name
                                                 ),
                                 result
                             );
