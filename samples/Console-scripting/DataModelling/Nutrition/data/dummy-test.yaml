@@ -1,0 +1,13 @@
+TestPaySignService:
+    Test:
+        TestString:
+            settings-key: TestStringValue
+            types:
+                - type1
+                - type2
+
+        TestString2:
+            settings-key: TestStringValue2
+            types:
+                - type1
+                - type2

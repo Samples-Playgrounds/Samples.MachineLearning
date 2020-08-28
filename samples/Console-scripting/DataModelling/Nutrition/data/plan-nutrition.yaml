@@ -1,0 +1,18 @@
+Nutrition:
+    TDEE:
+        AdditionalMin: 400
+        AdditionalMin: 500
+        ProteinGramsPerKiloGramMass: 2
+        ProteinGramsPerKiloGramMassMin: 1.5
+        ProteinGramsPerKiloGramMassMax: 3
+        CarboHydratesPerKiloGramGoalMass: 2
+
+    Energy:
+        ProteinsPerGramKCalories: 4
+        CarboHydratesPerGramKCalories: 4
+        FatPerGramKCalories: 9
+
+    Ratios:
+        Proteins:       34
+        CarboHydrates:  30
+        Fat:            36
