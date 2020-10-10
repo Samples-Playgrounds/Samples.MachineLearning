@@ -1,7 +1,7 @@
 Nutrition:
     TDEE:
         AdditionalMin: 400
-        AdditionalMin: 500
+        AdditionalMax: 500
         ProteinGramsPerKiloGramMass: 2
         ProteinGramsPerKiloGramMassMin: 1.5
         ProteinGramsPerKiloGramMassMax: 3
