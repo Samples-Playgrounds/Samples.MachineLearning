@@ -1,6 +1,149 @@
 # readme.md
 
-## Links/References
+-   todos
+
+    -   learn basics
+    
+    -   small samples while learning basics and getting deeper into topics
+    
+        -   LLM coach bot 
+            
+            -   Chat GPT
+            
+            -   Bard
+        
+        -   image to text
+        
+            -   https://shairozsohail.medium.com/reading-and-categorizing-scanned-documents-using-deep-learning-4ab2c0e3f34c
+            
+            -   https://medium.com/artificialis/how-to-extract-text-from-any-image-with-deep-learning-e834d5a9863e
+            
+            -   https://stackoverflow.com/questions/10947399/how-to-implement-and-do-ocr-in-a-c-sharp-project
+            
+            -   https://stackoverflow.com/questions/76521971/detect-tesseract-5-2-image-text-orientation
+                
+            -   https://www.reddit.com/r/computervision/comments/v01928/project_help_does_anyone_know_of_any_good_ocricr/
+            
+                -   libs
+                
+                    -   python
+                    
+                        -   easyOCR
+                    
+                            -   .NET wrappers commercial
+                            
+                                -   https://github.com/JaidedAI/EasyOCR
+
+                    -   tesseract
+
+                        -   https://www.nuget.org/packages/Tesseract
+
+                        -   https://www.nuget.org/packages/Xamarin.Tesseract
+
+                            -   https://github.com/halkar/Tesseract.Xamarin
+
+                            -   https://www.nuget.org/packages/Tesseract.Net.SDK
+                    
+                    -   leptonica
+
+                        -   http://www.leptonica.org/
+
+                        -   https://github.com/DanBloomberg/leptonica
+
+                        -   https://tpgit.github.io/UnOfficialLeptDocs/leptonica/index.html
+
+                        -   c# 
+
+                            -   http://www.leptonica.org/vs2008doc/csharp-and-liblept.html
+
+                            -   https://github.com/Phreak87/LeptonicaSharp
+
+                            -   https://github.com/tvn-cosine/leptonica.net
+
+                            -   https://www.nuget.org/packages/LeptonicaSharp
+- books
+
+    -   genetic algorithms and machine learning for programmers
+    
+    -   grokking artificial intelligence algorithms
+    
+    -   deep learning
+    
+    -   inside deep learning
+    
+    -
+    
+    -   libs    
+        
+        - moljac
+    
+            -   ML.net
+            
+                -   https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet
+                
+                -   https://dotnet.microsoft.com/en-us/learn/ml-dotnet/get-started-tutorial/intro
+                
+                -   https://github.com/dotnet/machinelearning
+                
+                -   https://en.wikipedia.org/wiki/ML.NET
+
+            _   numpy
+
+                -   Numpy.NET
+
+            -   pythonnet
+
+                -   https://github.com/pythonnet/pythonnet
+
+            -   pythonnet-standard
+
+                    -   https://github.com/henon/pythonnet_netstandard
+
+            -   TensorFlow
+
+                -   TensorFlow.NET
+
+                    -   https://github.com/SciSharp/TensorFlow.NET
+
+            -   tesseract
+            
+                -   https://github.com/charlesw/tesseract
+                
+                    -   https://code.google.com/archive/p/tesseractdotnet/
+                    
+                -   https://github.com/charlesw/tesseract-samples
+                
+                -   https://www.luisllamas.es/en/csharp-ocr-tesseract/
+                
+                -   https://www.luisllamas.es/en/csharp-ocr-tesseract/
+                
+                -   https://stackoverflow.com/questions/16598390/tesseract-ocr-simple-example
+                
+                -   https://stackoverflow.com/questions/18417979/using-tesseract-ocr-in-c-sharp-project
+                
+            -   SciKit-Learn
+
+            -   pytorch
+                
+                -   https://pytorch.org/
+                
+                -   https://github.com/pytorch/pytorch
+                
+                -   https://en.wikipedia.org/wiki/PyTorch
+                
+                -   TorchSharp
+                
+                    -   https://github.com/dotnet/TorchSharp
+                
+            -   Keras
+
+                _   Keras.NET
+                
+                    _   https://github.com/SciSharp/Keras.NET
+            
+    
+    
+    ## Links/References
 
 *   ML.net (Machine Learning .NET)
 
